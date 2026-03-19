@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>サンプルサイト</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+  <img src="FCC.png" alt="">
+  <span>FAT CAT CLINIC</span>
+</div>
+  <div class="menu-btn" onclick="toggleMenu()">≡</div>
+
+  <div class="menu" id="menu">
+    <div><a href="#">トップ</a></div>
+    <div><a href="#">医師紹介</a></div>
+    <div><a href="#">個室一覧</a></div>
+    <div><a href="#">処方箋＆特典</a></div>
+    <div><a href="#">予約</a></div>
+    <div><a href="#">アクセス</a></div>
+  </div>
+</header>
+
+<div class="spacer"></div>
+
+<!-- スライド -->
+<div class="slider">
+  <img id="slide" src="https://picsum.photos/800/300?1">
+</div>
+
+<!-- 紹介 -->
+<div class="section">
+  <img src="https://picsum.photos/400/300?2">
+  <div class="text">
+    <h2>サービス①</h2>
+    <p>説明テキスト①</p>
+  </div>
+</div>
+
+<div class="section">
+  <img src="FCC_コース.jpg">
+  <div class="text">
+    <h2>サービス②</h2>
+    <p>説明テキスト②</p>
+  </div>
+</div>
+
+<div class="section">
+  <img src="https://picsum.photos/400/300?4">
+  <div class="text">
+    <h2>サービス③</h2>
+    <p>説明テキスト③</p>
+  </div>
+</div>
+
+<footer>
+  <p>FAT CAT CLINIC</p>
+  <p>METEOR SINRYU シロガネ 8-24</p>
+  <p>©SQUARE ENIX</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+// スライド
+let i = 1;
+setInterval(() => {
+  i++;
+  if (i > 3) i = 1;
+  document.getElementById("slide").src = `https://picsum.photos/800/300?${i}`;
+}, 3000);
+</script>
+
+</body>
+</html>

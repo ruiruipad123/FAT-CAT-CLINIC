@@ -1,0 +1,159 @@
+/* 全体のはみ出し防止 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #121212; /* ←ダーク背景 */
+  color: #ffffff;     /* ←基本文字白 */
+  overflow-x: hidden;
+}
+
+/* ヘッダー */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #1e1e1e; /* 少し明るめ */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  z-index: 1000;
+  border-bottom: 1px solid #333; /* 境界線 */
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.menu-btn {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* メニュー */
+.menu {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 60px;
+  background: #2a2a2a;
+  color: white;
+  padding: 20px;              /* ←大きく */
+  border-radius: 10px;        /* ←少し丸く */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+  min-width: 180px;           /* ←横幅確保 */
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-size: 18px;            /* ←文字大きく */
+  padding: 12px 10px;         /* ←クリックしやすく */
+  border-radius: 6px;
+}
+
+/* ホバー効果 */
+.menu a:hover {
+  background: #3a3a3a;
+  color: #4da6ff;
+}
+
+/* ヘッダー分の余白 */
+.spacer {
+  height: 70px;
+}
+
+/* スライド */
+.slider img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  filter: brightness(0.8); /* 少し暗くして文字映え */
+}
+
+/* セクション */
+.section {
+  display: flex;
+  padding: 80px 20px;
+  gap: 30px;
+  align-items: center;
+}
+
+.section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.section img {
+  width: 50%;
+  border-radius: 10px;
+}
+
+.text {
+  width: 50%;
+}
+
+.text h2 {
+  margin-bottom: 10px;
+}
+
+.text p {
+  color: #ccc; /* 少し薄い白 */
+}
+
+/* フッター */
+footer {
+  background: #1a1a1a;
+  color: #aaa;
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  border-top: 1px solid #333;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+  }
+
+  .section img,
+  .text {
+    width: 100%;
+  }
+}
+
+/* ヘッダー全体を少し大きく */
+header {
+  padding: 20px 30px; /* ←大きくした */
+}
+
+/* ロゴ全体 */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;           /* アイコンと文字の間 */
+  text-decoration: none;
+  color: white;
+  font-size: 22px;     /* ←文字サイズUP */
+  font-weight: bold;
+}
+
+/* アイコン */
+.logo img {
+  height: 40px;        /* ←アイコンサイズ */
+  width: 40px;
+  object-fit: cover;
+  border-radius: 8px;  /* ←角丸（任意） */
+}
+
+/* ハンバーガーもバランス調整 */
+.menu-btn {
+  font-size: 28px;     /* ←少し大きく */
+}
