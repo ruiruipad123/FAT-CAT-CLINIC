@@ -117,18 +117,6 @@ footer {
   border-top: 1px solid #333;
 }
 
-/* スマホ対応 */
-@media (max-width: 768px) {
-  .section {
-    flex-direction: column;
-  }
-
-  .section img,
-  .text {
-    width: 100%;
-  }
-}
-
 /* ヘッダー全体を少し大きく */
 header {
   padding: 20px 30px; /* ←大きくした */
@@ -156,4 +144,16 @@ header {
 /* ハンバーガーもバランス調整 */
 .menu-btn {
   font-size: 28px;     /* ←少し大きく */
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+  }
+
+  .section img,
+  .text {
+    width: 100%;
+  }
 }
