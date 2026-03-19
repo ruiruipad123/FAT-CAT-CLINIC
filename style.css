@@ -22,7 +22,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 25px;
+  padding: 50px 55px;
   z-index: 1000;
   border-bottom: 1px solid #333; /* 境界線 */
 }
@@ -32,7 +32,7 @@ header {
 }
 
 .menu-btn {
-  font-size: 24px;
+  font-size: 55px;
   cursor: pointer;
 }
 
@@ -44,7 +44,7 @@ header {
   top: 60px;
   background: #2a2a2a;
   color: white;
-  padding: 20px;              /* ←大きく */
+  padding: 50px;              /* ←大きく */
   border-radius: 10px;        /* ←少し丸く */
   box-shadow: 0 8px 25px rgba(0,0,0,0.6);
   min-width: 180px;           /* ←横幅確保 */
