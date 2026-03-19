@@ -17,45 +17,60 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background: #1e1e1e; /* 少し明るめ */
+  background: #1e1e1e;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 55px;
+  padding: 25px 35px; /* ←少し大きく */
   z-index: 1000;
-  border-bottom: 1px solid #333; /* 境界線 */
+  border-bottom: 1px solid #333;
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 28px; /* ←文字を大きく */
   font-weight: bold;
 }
 
+.logo img {
+  height: 60px; /* ←画像を大きく */
+  width: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 .menu-btn {
-  font-size: 55px;
+  font-size: 36px; /* ←マークを大きく */
   cursor: pointer;
+  padding: 8px 14px;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  background: transparent;
 }
 
 /* メニュー */
 .menu {
   display: none;
   position: absolute;
-  right: 10px;
-  top: 60px;
+  right: 15px;
+  top: 80px; /* ←位置を少し下げる */
   background: #2a2a2a;
   color: white;
-  padding: 50px;              /* ←大きく */
-  border-radius: 10px;        /* ←少し丸く */
+  padding: 25px; /* ←大きく */
+  border-radius: 12px;
+  min-width: 220px; /* ←横幅アップ */
   box-shadow: 0 8px 25px rgba(0,0,0,0.6);
-  min-width: 180px;           /* ←横幅確保 */
 }
 
 .menu a {
-  text-decoration: none;
-  color: white;
   display: block;
-  font-size: 18px;            /* ←文字大きく */
-  padding: 12px 10px;         /* ←クリックしやすく */
+  font-size: 22px; /* ←文字大きく */
+  padding: 14px 12px;
+  color: white;
+  text-decoration: none;
   border-radius: 6px;
 }
 
@@ -67,7 +82,7 @@ header {
 
 /* ヘッダー分の余白 */
 .spacer {
-  height: 70px;
+  height: 110px; /* ←ヘッダー拡大に合わせて調整 */
 }
 
 /* スライド */
