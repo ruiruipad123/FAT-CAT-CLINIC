@@ -27,27 +27,12 @@ header {
   border-bottom: 1px solid #333;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 120px;  /* ←ここを大きく（調整ポイント） */
-  font-weight: bold;
-}
-
-.logo img {
-  height: 70px;   /* ←ロゴ文字に合わせて大きく */
-  width: 70px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
 .menu-btn {
   font-size: 36px; /* ←マークを大きく */
   cursor: pointer;
-  padding: 8px 14px;
-  border: 2px solid #ffffff;
-  border-radius: 8px;
+  padding: 4px 10px;
+  border: 2px solid #b8b8b8;
+  border-radius: 6px;
   background: transparent;
 }
 
@@ -82,7 +67,7 @@ header {
 
 /* ヘッダー分の余白 */
 .spacer {
-  height: 140px; /* ←ヘッダーに合わせて調整 */
+  height: 100px; /* ←ヘッダーに合わせて調整 */
 }
 
 /* スライド */
@@ -153,21 +138,16 @@ header {
   gap: 10px;           /* アイコンと文字の間 */
   text-decoration: none;
   color: white;
-  font-size: 22px;     /* ←文字サイズUP */
+  font-size: 40px;     /* ←文字サイズUP */
   font-weight: bold;
 }
 
 /* アイコン */
 .logo img {
-  height: 40px;        /* ←アイコンサイズ */
-  width: 40px;
+  height: 70px;        /* ←アイコンサイズ */
+  width: 70px;
   object-fit: cover;
-  border-radius: 8px;  /* ←角丸（任意） */
-}
-
-/* ハンバーガーもバランス調整 */
-.menu-btn {
-  font-size: 28px;     /* ←少し大きく */
+  border-radius: 10px;  /* ←角丸（任意） */
 }
 
 /* スマホ対応 */
@@ -179,5 +159,44 @@ header {
   .section img,
   .text {
     width: 100%;
+  }
+
+  header {
+    padding: 12px 15px; /* ←上下・左右をコンパクトに */
+  }
+
+  /* ロゴを小さく */
+  .logo {
+    font-size: 20px;
+    gap: 8px;
+  }
+
+  .logo img {
+    height: 35px;
+    width: 35px;
+  }
+
+  /* ハンバーガーを少し小さく */
+  .menu-btn {
+    font-size: 28px;
+    padding: 4px 8px;
+  }
+
+  /* メニューを画面いっぱい寄りに */
+  .menu {
+    right: 10px;
+    top: 60px;
+    min-width: 180px;
+    padding: 15px;
+  }
+
+  .menu a {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  /* spacerも調整 */
+  .spacer {
+    height: 70px;
   }
 }
