@@ -146,12 +146,6 @@ header {
   font-size: 28px;     /* ←少し大きく */
 }
 
-/* メニューの現在地 */
-.active {
-  color: #4da6ff;
-  font-weight: bold;
-}
-
 /* スマホ対応 */
 @media (max-width: 768px) {
   .section {
