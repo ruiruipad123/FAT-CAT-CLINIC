@@ -31,13 +31,13 @@ header {
   display: flex;
   align-items: center;
   gap: 15px;
-  font-size: 28px; /* ←文字を大きく */
+  font-size: 120px;  /* ←ここを大きく（調整ポイント） */
   font-weight: bold;
 }
 
 .logo img {
-  height: 60px; /* ←画像を大きく */
-  width: 60px;
+  height: 70px;   /* ←ロゴ文字に合わせて大きく */
+  width: 70px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -82,7 +82,7 @@ header {
 
 /* ヘッダー分の余白 */
 .spacer {
-  height: 110px; /* ←ヘッダー拡大に合わせて調整 */
+  height: 140px; /* ←ヘッダーに合わせて調整 */
 }
 
 /* スライド */
