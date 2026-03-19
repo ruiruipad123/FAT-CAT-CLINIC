@@ -176,23 +176,33 @@ header {
     width: 35px;
   }
 
-  /* ハンバーガーを少し小さく */
+  /* ハンバーガー（縦長防止 + コンパクト） */
   .menu-btn {
     font-size: 28px;
-    padding: 4px 8px;
+    padding: 6px 10px;
+    border: 2px solid #fff;
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
   }
 
-  /* メニューを画面いっぱい寄りに */
+  /* プルダウン（3倍くらい大きく） */
   .menu {
     right: 10px;
     top: 60px;
-    min-width: 180px;
-    padding: 15px;
+
+    min-width: 280px;   /* ←横幅アップ */
+    padding: 30px;      /* ←全体を大きく */
+    border-radius: 12px;
   }
 
+  /* メニュー文字も大きく */
   .menu a {
-    font-size: 18px;
-    padding: 12px;
+    font-size: 22px;
+    padding: 14px 10px;
   }
 
   /* spacerも調整 */
