@@ -88,16 +88,30 @@ header {
   /* 少し暗くして文字映え */
 }
 
+/* 各ページのトップ画像 */
+.top img {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+}
+
+.top_section {
+  display: flex;
+  gap: 30px;
+  text-align: center;
+}
+
+.top_text {
+  width: 100%;
+  font-size: 100px;
+}
+
 /* セクション */
 .section {
   display: flex;
   padding: 80px 20px;
   gap: 30px;
   align-items: center;
-}
-
-.section:nth-child(even) {
-  flex-direction: row-reverse;
 }
 
 .section img {
@@ -116,6 +130,44 @@ header {
 .text p {
   color: #ccc;
   /* 少し薄い白 */
+}
+
+.section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* doctorページの編集用 */
+.doctor_section {
+  background-color: #2c2929;
+  display: flex;
+  padding: 20px 20px;
+  gap: 30px;
+  border-top: 1px solid #ada2a2;
+}
+
+.doctor_text {
+  width: 70%;
+}
+
+.doctor_section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.doctor_section img {
+  width: 30%;
+  border-radius: 30px;
+}
+
+.doctor_text h2 {
+  font-size: 80px;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.doctor_text p {
+  font-size: 40px;
+  margin-bottom: 10px;
 }
 
 /* フッター */
@@ -235,5 +287,71 @@ header {
   /* spacerも調整 */
   .spacer {
     height: 70px;
+  }
+
+  /* フッター */
+  footer {
+    background: #1a1a1a;
+    color: #aaa;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    border-top: 1px solid #333;
+  }
+
+  .footerp {
+    font-size: 25px;
+  }
+
+  /* 各ページのトップ画像 */
+  .top img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .top_section {
+    display: flex;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .top_text {
+    width: 100%;
+    font-size: 40px;
+  }
+
+  /* doctorページの編集用 */
+  .doctor_section {
+    background-color: #2c2929;
+    display: flex;
+    padding: 20px 20px;
+    gap: 30px;
+    border-top: 1px solid #ada2a2;
+  }
+
+  .doctor_text {
+    width: 70%;
+  }
+
+  .doctor_section:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .doctor_section img {
+    width: 30%;
+    border-radius: 30px;
+  }
+
+  .doctor_text h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .doctor_text p {
+    font-size: 15px;
+    margin-bottom: 10px;
   }
 }
