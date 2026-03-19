@@ -164,7 +164,11 @@ header {
 /* スマホ対応 */
 @media (max-width: 768px) {
   .section {
-    flex-direction: column;
+    flex-direction: column !important;
+  }
+
+  .section:nth-child(even) {
+    flex-direction: column !important;
   }
 
   .section img,
