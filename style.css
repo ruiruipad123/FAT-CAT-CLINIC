@@ -6,8 +6,10 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background: #121212; /* ←ダーク背景 */
-  color: #ffffff;     /* ←基本文字白 */
+  background: #121212;
+  /* ←ダーク背景 */
+  color: #ffffff;
+  /* ←基本文字白 */
   overflow-x: hidden;
 }
 
@@ -22,13 +24,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 35px; /* ←少し大きく */
+  padding: 25px 35px;
+  /* ←少し大きく */
   z-index: 1000;
   border-bottom: 1px solid #333;
 }
 
 .menu-btn {
-  font-size: 36px; /* ←マークを大きく */
+  font-size: 36px;
+  /* ←マークを大きく */
   cursor: pointer;
   padding: 4px 10px;
   border: 2px solid #b8b8b8;
@@ -41,18 +45,22 @@ header {
   display: none;
   position: absolute;
   right: 15px;
-  top: 80px; /* ←位置を少し下げる */
+  top: 80px;
+  /* ←位置を少し下げる */
   background: #2a2a2a;
   color: white;
-  padding: 25px; /* ←大きく */
+  padding: 25px;
+  /* ←大きく */
   border-radius: 12px;
-  min-width: 220px; /* ←横幅アップ */
-  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+  min-width: 220px;
+  /* ←横幅アップ */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
 }
 
 .menu a {
   display: block;
-  font-size: 22px; /* ←文字大きく */
+  font-size: 22px;
+  /* ←文字大きく */
   padding: 14px 12px;
   color: white;
   text-decoration: none;
@@ -67,7 +75,8 @@ header {
 
 /* ヘッダー分の余白 */
 .spacer {
-  height: 100px; /* ←ヘッダーに合わせて調整 */
+  height: 100px;
+  /* ←ヘッダーに合わせて調整 */
 }
 
 /* スライド */
@@ -75,7 +84,8 @@ header {
   width: 100%;
   height: 300px;
   object-fit: cover;
-  filter: brightness(0.8); /* 少し暗くして文字映え */
+  filter: brightness(0.8);
+  /* 少し暗くして文字映え */
 }
 
 /* セクション */
@@ -104,7 +114,8 @@ header {
 }
 
 .text p {
-  color: #ccc; /* 少し薄い白 */
+  color: #ccc;
+  /* 少し薄い白 */
 }
 
 /* フッター */
@@ -123,26 +134,31 @@ footer {
 
 /* ヘッダー全体を少し大きく */
 header {
-  padding: 20px 30px; /* ←大きくした */
+  padding: 20px 30px;
+  /* ←大きくした */
 }
 
 /* ロゴ全体 */
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;           /* アイコンと文字の間 */
+  gap: 10px;
+  /* アイコンと文字の間 */
   text-decoration: none;
   color: white;
-  font-size: 40px;     /* ←文字サイズUP */
+  font-size: 40px;
+  /* ←文字サイズUP */
   font-weight: bold;
 }
 
 /* アイコン */
 .logo img {
-  height: 70px;        /* ←アイコンサイズ */
+  height: 70px;
+  /* ←アイコンサイズ */
   width: 70px;
   object-fit: cover;
-  border-radius: 10px;  /* ←角丸（任意） */
+  border-radius: 10px;
+  /* ←角丸（任意） */
 }
 
 /* スマホ対応 */
@@ -157,7 +173,8 @@ header {
   }
 
   header {
-    padding: 12px 15px; /* ←上下・左右をコンパクトに */
+    padding: 12px 15px;
+    /* ←上下・左右をコンパクトに */
   }
 
   /* ロゴを小さく */
@@ -174,13 +191,22 @@ header {
   /* ハンバーガー（縦長防止 + コンパクト） */
   .menu-btn {
     font-size: 28px;
-    padding: 6px 10px;
+
+    width: 44px;
+    /* ←幅固定 */
+    height: 44px;
+    /* ←高さ固定 */
+
+    padding: 0;
+    /* ←余計な余白を消す */
+
     border: 2px solid #fff;
-    border-radius: 6px;
+    border-radius: 8px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
     line-height: 1;
   }
 
@@ -189,8 +215,10 @@ header {
     right: 10px;
     top: 60px;
 
-    min-width: 280px;   /* ←横幅アップ */
-    padding: 30px;      /* ←全体を大きく */
+    min-width: 280px;
+    /* ←横幅アップ */
+    padding: 30px;
+    /* ←全体を大きく */
     border-radius: 12px;
   }
 
