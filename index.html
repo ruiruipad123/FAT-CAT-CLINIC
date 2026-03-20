@@ -40,7 +40,7 @@
 </div>
 
 <!-- 紹介 -->
-<div class="section">
+<div class="section hp-section">
   <img src="Sample.jpg">
   <div class="text">
     <h2>サービス①</h2>
@@ -48,7 +48,7 @@
   </div>
 </div>
 
-<div class="section">
+<div class="section hp-section">
   <img src="Sample.jpg">
   <div class="text">
     <h2>サービス②</h2>
@@ -56,7 +56,7 @@
   </div>
 </div>
 
-<div class="section">
+<div class="section hp-section">
   <img src="Sample.jpg">
   <div class="text">
     <h2>サービス③</h2>
@@ -82,6 +82,21 @@ setInterval(() => {
   if (i > 3) i = 1;
   document.getElementById("slide").src = `https://picsum.photos/800/300?${i}`;
 }, 3000);
+
+// スクロールアニメーション (Intersection Observer)
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.hp-section').forEach(section => {
+    observer.observe(section);
+  });
+});
 </script>
 
 </body>
