@@ -1,81 +1,85 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>サンプルサイト</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>医師紹介</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<div class="logo">
-  <img src="FCC_icon.jpg" alt="">
-  <span>FAT CAT CLINIC</span>
-</div>
-  <div class="menu-btn" onclick="toggleMenu()">≡</div>
+  <header>
+    <div class="logo">
+      <img src="FCC_icon.jpg" alt="">
+      <span>FAT CAT CLINIC</span>
+    </div>
+    <div class="menu-btn" onclick="toggleMenu()">≡</div>
 
-  <div class="menu" id="menu">
-    <div><a href="index.html">トップ</a></div>
-    <div><a href="#" class="active">医師紹介</a></div>
-    <div><a href="rooms.html">個室一覧</a></div>
-    <div><a href="menu.html">処方箋＆特典</a></div>
-    <div><a href="https://docs.google.com/forms/d/e/1FAIpQLScGeY6jAjrhF7GvbKn03UDusQQ-_JL8GhUYXQqJsI2gJDrvLQ/viewform?usp=send_form">予約はこちら</a></div>
-    <div><a href="access.html">アクセス</a></div>
+    <div class="menu" id="menu">
+      <div><a href="index.html">トップ</a></div>
+      <div><a href="#" class="active">医師紹介</a></div>
+      <div><a href="rooms.html">個室一覧</a></div>
+      <div><a href="menu.html">処方箋＆特典</a></div>
+      <div><a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScGeY6jAjrhF7GvbKn03UDusQQ-_JL8GhUYXQqJsI2gJDrvLQ/viewform?usp=send_form">予約はこちら</a>
+      </div>
+      <div><a href="access.html">アクセス</a></div>
+    </div>
+  </header>
+
+  <div class="spacer"></div>
+
+  <!-- 紹介 -->
+  <div class="top">
+    <img src="doctor_top.jpg">
   </div>
-</header>
-
-<div class="spacer"></div>
-
-<!-- 紹介 -->
-<div class="top">
-  <img src="doctor_top.jpg">
-</div>
-<div class="top_section">
-  <div class="top_text">
-    <h2>医師紹介</h2>
+  <div class="top_section">
+    <div class="top_text">
+      <h2>医師紹介</h2>
+    </div>
   </div>
-</div>
 
-<div class="doctor-intro">
-  <p>気になる医師をタップして、詳しいプロフィールをチェックしてね！</p>
-</div>
+  <div class="doctor-intro">
+    <p>気になる医師をタップして、詳しいプロフィールをチェックしてね！</p>
+  </div>
 
-<div class="doctor-grid">
-  <a href="homapiyo.html" class="doctor-card">
-    <img src="homapiyo_senzai.jpg" alt="ほまぴよ神">
-    <p>ほまぴよ神</p>
-  </a>
-  <a href="sekirei.html" class="doctor-card">
-    <img src="sekirei_senzai.jpg" alt="セキレイ">
-    <p>セキレイ</p>
-  </a>
-  <a href="lewis.html" class="doctor-card">
-    <img src="lewis_senzai.jpg" alt="ルイス">
-    <p>ルイス</p>
-  </a>
-</div>
+  <div class="doctor-grid">
+    <a href="homapiyo.html" class="doctor-card">
+      <img src="homapiyo_senzai.jpg" alt="ほまぴよ神">
+      <p>ほまぴよ神</p>
+    </a>
+    <a href="sekirei.html" class="doctor-card">
+      <img src="sekirei_senzai.jpg" alt="セキレイ">
+      <p>セキレイ</p>
+    </a>
+    <a href="lewis.html" class="doctor-card">
+      <img src="lewis_senzai.jpg" alt="ルイス">
+      <p>ルイス</p>
+    </a>
+  </div>
 
-<footer>
-  <p class="footerp">FAT CAT CLINIC</p>
-  <p>©SQUARE ENIX</p>
-</footer>
+  <footer>
+    <p class="footerp">FAT CAT CLINIC</p>
+    <p>©SQUARE ENIX</p>
+  </footer>
 
-<script>
-function toggleMenu() {
-  const menu = document.getElementById("menu");
-  menu.style.display = menu.style.display === "block" ? "none" : "block";
-}
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
 
-// スライド
-let i = 1;
-setInterval(() => {
-  i++;
-  if (i > 3) i = 1;
-  document.getElementById("slide").src = `https://picsum.photos/800/300?${i}`;
-}, 3000);
-</script>
+    // スライド
+    let i = 1;
+    setInterval(() => {
+      i++;
+      if (i > 3) i = 1;
+      document.getElementById("slide").src = `https://picsum.photos/800/300?${i}`;
+    }, 3000);
+  </script>
 
 </body>
+
 </html>
