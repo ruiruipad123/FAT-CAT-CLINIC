@@ -77,6 +77,14 @@ header {
   color: #ff7700;
 }
 
+/* 現在のページのリンクを無効化し、現在のページだと分かるスタイルにする */
+.menu a.active {
+  background: #ff9900;
+  color: #ffffff;
+  pointer-events: none;
+  cursor: default;
+}
+
 /* ヘッダー分の余白 */
 .spacer {
   height: 90px;
@@ -420,6 +428,33 @@ header {
   box-shadow: 0 10px 20px rgba(255, 153, 0, 0.2);
 }
 
+/* 戻るボタン */
+.back-btn-container {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #ff7700;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 15px 50px;
+  border-radius: 40px;
+  text-decoration: none;
+  border: 4px solid #ffcc00;
+  box-shadow: 0 8px 20px rgba(255, 153, 0, 0.15);
+  transition: all 0.2s ease;
+}
+.back-btn:hover {
+  background: #ffcc00;
+  color: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(255, 153, 0, 0.3);
+}
+
 /* フッター */
 footer {
   background: #ffb833;
@@ -656,5 +691,12 @@ footer p {
   .gallery-thumbs img {
     width: 90px;
     height: 90px;
+  }
+  .back-btn-container {
+    margin-bottom: 50px;
+  }
+  .back-btn {
+    font-size: 18px;
+    padding: 12px 30px;
   }
 }
