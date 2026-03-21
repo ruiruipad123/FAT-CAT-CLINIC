@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ほまぴよ神 - 医師紹介</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="FCC_icon.jpg" alt="">
+            <span>FAT CAT CLINIC</span>
+        </div>
+        <div class="menu-btn" onclick="toggleMenu()">≡</div>
+
+        <div class="menu" id="menu">
+            <div><a href="index.html">トップ</a></div>
+            <div><a href="doctor.html" class="active">医師紹介</a></div>
+            <div><a href="rooms.html">個室一覧</a></div>
+            <div><a href="menu.html">処方箋＆特典</a></div>
+            <div><a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScGeY6jAjrhF7GvbKn03UDusQQ-_JL8GhUYXQqJsI2gJDrvLQ/viewform?usp=send_form">予約はこちら</a>
+            </div>
+            <div><a href="access.html">アクセス</a></div>
+        </div>
+    </header>
+
+    <div class="spacer"></div>
+
+    <!-- 大画像とアイコン -->
+    <div class="profile-header">
+        <img src="Sample.jpg" class="profile-hero" alt="Top Image">
+        <div class="profile-icon">
+            <img src="homapiyo_senzai.jpg" alt="Icon">
+        </div>
+    </div>
+
+    <!-- セリフ見出し -->
+    <div class="profile-quote">
+        <h2>
+            <span class="quote-line-1">「お腹すいたピョ🐣</span>
+            <span class="quote-line-2">わからない事は聞いてくださいピョ🐣」</span>
+        </h2>
+    </div>
+
+    <!-- プロフィール記入欄 -->
+    <div class="profile-details">
+        <table class="profile-table">
+            <tr>
+                <th>名前</th>
+                <td>ほまぴよ神</td>
+            </tr>
+            <tr>
+                <th>担当</th>
+                <td>（準備中）</td>
+            </tr>
+            <tr>
+                <th>特徴</th>
+                <td>（準備中）</td>
+            </tr>
+            <tr>
+                <th>メッセージ</th>
+                <td>お腹すいたピョ🐣<br>わからない事は聞いてくださいピョ🐣</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- サムネイル付きギャラリー -->
+    <div class="profile-gallery">
+        <div class="gallery-main">
+            <img id="mainGalleryImg" src="Sample.jpg" alt="Gallery Main">
+        </div>
+        <div class="gallery-thumbs">
+            <img src="Sample.jpg" alt="Thumb 1" class="thumb active" onclick="changeImage(this, 0)">
+            <img src="Sample.jpg" alt="Thumb 2" class="thumb" onclick="changeImage(this, 1)">
+            <img src="Sample.jpg" alt="Thumb 3" class="thumb" onclick="changeImage(this, 2)">
+            <img src="Sample.jpg" alt="Thumb 4" class="thumb" onclick="changeImage(this, 3)">
+            <img src="Sample.jpg" alt="Thumb 5" class="thumb" onclick="changeImage(this, 4)">
+            <img src="Sample.jpg" alt="Thumb 6" class="thumb" onclick="changeImage(this, 5)">
+            <img src="Sample.jpg" alt="Thumb 7" class="thumb" onclick="changeImage(this, 6)">
+            <img src="Sample.jpg" alt="Thumb 8" class="thumb" onclick="changeImage(this, 7)">
+        </div>
+    </div>
+
+    <footer>
+        <p class="footerp">FAT CAT CLINIC</p>
+        <p>©SQUARE ENIX</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+
+        let currentGalleryIndex = 0;
+        let autoSlideInterval;
+        const mainImg = document.getElementById("mainGalleryImg");
+        let thumbs = [];
+
+        document.addEventListener("DOMContentLoaded", () => {
+            thumbs = document.querySelectorAll('.gallery-thumbs .thumb');
+            startAutoSlide();
+        });
+
+        function changeImage(element, index) {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+            updateGallery(element.src, index);
+        }
+
+        function updateGallery(src, index) {
+            currentGalleryIndex = index;
+
+            // ふわっと消える
+            mainImg.style.opacity = 0;
+
+            setTimeout(() => {
+                // 画像切り替えしてふわっと表示
+                mainImg.src = src;
+                mainImg.style.opacity = 1;
+            }, 400); // cssのtransitionにある0.4sと合わせる
+
+            thumbs.forEach(thumb => thumb.classList.remove('active'));
+            thumbs[index].classList.add('active');
+
+            // ページ自体が下まで勝手にスクロールされないよう、親要素だけ横にスクロール
+            const container = document.querySelector('.gallery-thumbs');
+            const thumb = thumbs[index];
+            const scrollTarget = thumb.offsetLeft - (container.offsetWidth / 2) + (thumb.offsetWidth / 2);
+
+            container.scrollTo({
+                left: scrollTarget,
+                behavior: 'smooth'
+            });
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                let nextIndex = (currentGalleryIndex + 1) % thumbs.length;
+                updateGallery(thumbs[nextIndex].src, nextIndex);
+            }, 5000);
+        }
+    </script>
+
+</body>
+
+</html>

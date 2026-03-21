@@ -221,49 +221,203 @@ header {
 }
 
 /* doctorページの編集用 */
-.doctor_section {
-  background-color: #ffffff;
+.doctor-intro {
+  text-align: center;
+  margin: 40px auto 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #0088ff;
+  padding: 0 20px;
+}
+
+.doctor-grid {
   display: flex;
-  padding: 40px 30px;
-  gap: 40px;
-  margin: 30px auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
   max-width: 1000px;
-  border-radius: 30px;
-  box-shadow: 0 10px 25px rgba(0, 150, 255, 0.15);
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+.doctor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 20px;
   border: 4px solid #cceeff;
+  box-shadow: 0 10px 25px rgba(0, 150, 255, 0.15);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  width: calc(33.333% - 20px);
+  max-width: 250px;
 }
 
-.doctor_text {
-  width: 65%;
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 150, 255, 0.25);
+  border-color: #0088ff;
 }
 
-.doctor_section:nth-of-type(even) {
-  flex-direction: row-reverse;
-  background-color: #f0f8ff;
+.doctor-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  border: 3px solid #f0f8ff;
 }
 
-.doctor_section img {
-  width: 35%;
-  border-radius: 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.doctor-card p {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #0088ff;
+  text-align: center;
+}
+
+/* プロフィールページ (sekirei.html など) */
+.profile-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 150px;
+}
+.profile-hero {
+  width: 100%;
+  height: 650px;
   object-fit: cover;
 }
-
-.doctor_text h2 {
-  font-size: 50px;
-  margin-bottom: 15px;
-  text-align: center;
-  margin-top: 0;
-  color: #0088ff;
-  text-shadow: 2px 2px 0px #b3d9ff;
+.profile-icon {
+  position: absolute;
+  bottom: -125px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.profile-icon img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 40px;
+  border: 6px solid #ffffff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  background: white;
 }
 
-.doctor_text p {
-  font-size: 24px;
-  margin-bottom: 10px;
+.profile-quote {
+  width: 100%;
+  margin: 0 auto 50px;
+  max-width: 800px;
+  padding: 0 20px;
+}
+.profile-quote h2 {
+  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  font-size: 34px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  margin: 0;
+}
+.quote-line-1 {
+  display: block;
+  text-align: left;
+  padding-left: 8%;
+  color: #2c3e50;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+.quote-line-2 {
+  display: block;
+  text-align: right;
+  padding-right: 8%;
+  color: #34495e;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.profile-details {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  padding: 40px;
+  border: 5px solid #ffcc00;
+  border-radius: 30px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(255, 153, 0, 0.1);
+}
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.profile-table th, .profile-table td {
+  padding: 15px;
+  border-bottom: 2px dashed #ffeeba;
+  font-size: 20px;
+}
+.profile-table tr:last-child th,
+.profile-table tr:last-child td {
+  border-bottom: none;
+}
+.profile-table th {
+  width: 30%;
+  color: #ff9900;
+  text-align: left;
+  font-size: 22px;
+}
+.profile-table td {
   color: #444;
-  line-height: 1.5;
   font-weight: bold;
+}
+
+.profile-gallery {
+  max-width: 800px;
+  margin: 0 auto 80px;
+  text-align: center;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.gallery-main img {
+  width: 100%;
+  height: 450px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  object-fit: cover;
+  transition: opacity 0.4s ease-in-out;
+}
+.gallery-thumbs {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  position: relative;
+}
+.gallery-thumbs::-webkit-scrollbar {
+  height: 8px;
+}
+.gallery-thumbs::-webkit-scrollbar-thumb {
+  background: #ffb833;
+  border-radius: 10px;
+}
+.gallery-thumbs img {
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 4px solid transparent;
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.gallery-thumbs img:hover, .gallery-thumbs img.active {
+  border-color: #ff9900;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 153, 0, 0.2);
 }
 
 /* フッター */
@@ -379,10 +533,11 @@ footer p {
   }
   
   .main-heading h1 {
-    font-size: 36px;
+    font-size: 26px;
+    letter-spacing: 0;
   }
   .main-heading p {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   /* HPセクション（モバイル） */
@@ -426,30 +581,80 @@ footer p {
   }
 
   /* doctorページの編集用 */
-  .doctor_section {
-    flex-direction: column !important;
+  .doctor-intro {
+    font-size: 18px;
+    margin: 30px auto 10px;
+  }
+  .doctor-grid {
+    gap: 15px;
+  }
+  .doctor-card {
+    width: calc(50% - 10px);
+    padding: 15px;
+    border-width: 3px;
+    border-radius: 20px;
+  }
+  .doctor-card img {
+    border-radius: 15px;
+    margin-bottom: 10px;
+  }
+  .doctor-card p {
+    font-size: 18px;
+  }
+
+  /* プロフィールページ (モバイル) */
+  .profile-header {
+    margin-bottom: 110px;
+  }
+  .profile-hero {
+    height: 300px;
+  }
+  .profile-icon {
+    bottom: -80px;
+  }
+  .profile-icon img {
+    width: 160px;
+    height: 160px;
+    border-radius: 25px;
+  }
+  .profile-quote h2 {
+    font-size: 18px;
+  }
+  .quote-line-1 {
+    padding-left: 0;
+  }
+  .quote-line-2 {
+    padding-right: 0;
+  }
+  .profile-details {
+    margin: 0 20px 40px;
     padding: 25px 20px;
-    margin: 20px;
   }
-
-  .doctor_text {
-    width: 100%;
-  }
-
-  .doctor_section:nth-of-type(even) {
-    flex-direction: column !important;
-  }
-
-  .doctor_section img {
-    width: 100%;
-    height: auto;
-  }
-
-  .doctor_text h2 {
-    font-size: 30px;
-  }
-
-  .doctor_text p {
+  .profile-table th, .profile-table td {
     font-size: 16px;
+    display: block;
+    width: 100%;
+  }
+  .profile-table th {
+    border-bottom: none;
+    padding-bottom: 5px;
+  }
+  .profile-table td {
+    padding-top: 0;
+    margin-bottom: 15px;
+  }
+  .profile-table tr:last-child td {
+    margin-bottom: 0;
+  }
+  .profile-gallery {
+    margin: 0 20px 50px;
+    padding: 25px 15px;
+  }
+  .gallery-main img {
+    height: 250px;
+  }
+  .gallery-thumbs img {
+    width: 90px;
+    height: 90px;
   }
 }
