@@ -756,3 +756,340 @@ footer p {
     padding: 12px 30px;
   }
 }
+/* --- 準備中エリア --- */
+.coming-soon-section {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #fff0f5;
+  border: 4px solid #ffb6c1;
+  border-radius: 20px;
+  margin: 40px auto 60px;
+  max-width: 1000px;
+}
+.coming-soon-section h2 {
+  font-size: 48px;
+  color: #ff69b4;
+  margin-bottom: 20px;
+}
+.coming-soon-section p {
+  font-size: 24px;
+  color: #d14781;
+  font-weight: bold;
+}
+
+
+/* --- 予約についてエリア --- */
+.reservation-section {
+  max-width: 1000px;
+  margin: 0 auto 80px;
+  padding: 0 10px;
+}
+.main-title {
+  text-align: center;
+  font-size: 56px;
+  margin-bottom: 50px;
+  color: #ff6699;
+  text-shadow: 2px 2px 0 #ffe0b2, 4px 4px 5px rgba(255,105,180,0.2);
+  letter-spacing: 2px;
+}
+
+/* スケジュール表 */
+.schedule-table-wrapper {
+  background-color: #fff0f5;
+  border: 5px solid #ffb6c1;
+  border-radius: 25px;
+  padding: 40px 30px;
+  color: #333;
+  margin-bottom: 60px;
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.15);
+}
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(255,105,180,0.1);
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.schedule-table th, .schedule-table td {
+  padding: 16px 10px;
+  border-bottom: 2px solid #ffebef;
+}
+.schedule-table tr:last-child th, .schedule-table tr:last-child td {
+  border-bottom: none;
+}
+.schedule-table th:first-child {
+  font-weight: bold;
+  color: #ff69b4;
+  font-size: 22px;
+  width: 25%;
+}
+.schedule-table th {
+  color: #d81b60;
+  font-weight: bold;
+}
+.mark-circle {
+  color: #ff1744;
+  font-size: 28px;
+  font-weight: 900;
+  text-shadow: 1px 1px 2px rgba(255,23,68,0.3);
+}
+.mark-circle-bold {
+  font-size: 34px;
+  text-shadow: 1px 1px 3px rgba(255,23,68,0.4);
+  -webkit-text-stroke: 2px #ff1744;
+}
+.business-day {
+  background: linear-gradient(135deg, #ffd54f 0%, #ff9800 100%);
+  color: #fff !important;
+  border-radius: 12px;
+  font-weight: 900;
+  vertical-align: middle;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 3px rgba(230, 81, 0, 0.6);
+  box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3);
+}
+.schedule-notes {
+  font-size: 15px;
+  color: #777;
+  text-align: center;
+  line-height: 1.8;
+  font-weight: bold;
+}
+
+/* 選べるコース */
+.courses-wrapper {
+  margin-bottom: 60px;
+  background: radial-gradient(circle at top left, #fff0f5 0%, #e0f7fa 100%);
+  border: 4px solid #81d4fa;
+  border-radius: 25px;
+  padding: 50px 20px;
+  position: relative;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+.courses-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.courses-header h3 {
+  font-size: 52px;
+  color: #00bcd4;
+  background: #fff;
+  display: inline-block;
+  padding: 12px 60px;
+  border-radius: 50px;
+  border: 5px solid #4dd0e1;
+  margin: 0;
+  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.25);
+  text-shadow: 1px 1px 0 #b2ebf2;
+}
+
+/* コースグリッド */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+.course-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  border: 3px solid transparent;
+  transition: transform 0.2s;
+}
+.course-card:hover {
+  transform: translateY(-5px);
+}
+.course-card h4 {
+  font-size: 20px;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid;
+}
+.course-card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.course-desc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  line-height: 1.6;
+}
+.course-price {
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 75px;
+}
+.course-price p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin: 2px 0;
+}
+.course-price span {
+  font-size: 15px;
+  color: #666;
+  margin-right: 5px;
+}
+
+/* 各コースのテーマカラー・背景指定 */
+.course-normal { border-color: #ffe0b2; }
+.course-normal h4 { color: #f57c00; border-color: #ffd180; }
+.course-normal .course-price { background: #fff3e0; border: 2px dashed #ffb74d; }
+
+.course-private { border-color: #c8e6c9; }
+.course-private h4 { color: #388e3c; border-color: #a5d6a7; }
+.course-private .course-price { background: #e8f5e9; border: 2px dashed #81c784; }
+
+.course-outing { border-color: #e1bee7; }
+.course-outing h4 { color: #8e24aa; border-color: #ce93d8; }
+.course-outing .course-price { background: #f3e5f5; border: 2px dashed #ba68c8; }
+
+.course-charter { border-color: #f8bbd0; }
+.course-charter h4 { color: #d81b60; border-color: #f48fb1; }
+.course-charter .course-price { background: #fce4ec; border: 2px dashed #f06292; }
+
+/* フッター用注意書き */
+.courses-notes {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: #0097a7;
+  background: rgba(255,255,255,0.9);
+  padding: 18px;
+  border-radius: 12px;
+  border: 3px solid #80deea;
+}
+
+@media screen and (max-width: 768px) {
+  .schedule-table { font-size: 15px; }
+  .schedule-table th, .schedule-table td { padding: 8px 4px; }
+  .schedule-table th:first-child { font-size: 16px; }
+  .main-title { font-size: 42px; }
+  .courses-header h3 { font-size: 34px; padding: 10px 25px; }
+  .course-card h4 { font-size: 18px; }
+}
+
+.schedule-notes-box {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: #d81b60;
+  background: rgba(255,255,255,0.9);
+  padding: 18px;
+  border-radius: 12px;
+  border: 3px solid #f8bbd0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.highlight-note {
+  color: #ff4081;
+  margin-top: 5px;
+}
+.current-day-highlight {
+    background-color: #ff4081 !important;
+    color: #ffffff !important;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 64, 129, 0.4);
+}
+.current-day-highlight .mark-circle {
+    color: #ffffff !important;
+    text-shadow: none !important;
+    -webkit-text-stroke: 2px #ffffff !important;
+}
+.current-day-highlight.business-day {
+    background-color: #f50057 !important;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  /* Schedule Table Restorations */
+  .schedule-table { font-size: 14px; }
+  .schedule-table th, .schedule-table td { padding: 5px 2px; }
+  .schedule-table th:first-child { font-size: 15px; }
+  .mark-circle { font-size: 20px; }
+  .mark-circle-bold { font-size: 28px; -webkit-text-stroke: 1px #ff1744; }
+  .business-day { font-size: 13px; letter-spacing: 0; padding: 2px; }
+  
+  /* Titles */
+  .main-title { font-size: 32px; margin-bottom: 25px; }
+  .courses-header h3 { font-size: 26px; padding: 8px 15px; border-width: 3px; }
+  
+  /* Courses Grid: 2 columns */
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .course-card { padding: 10px; border-radius: 15px; }
+  
+  .course-card h4 {
+    font-size: 15px;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    white-space: normal;
+    word-break: keep-all; 
+  }
+  
+  .course-desc {
+    font-size: 11px;
+    display: block;
+    min-height: auto;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  
+
+  
+  .course-price {
+    min-height: 50px;
+    padding: 6px;
+  }
+  .course-price p {
+    font-size: 14px;
+  }
+  .course-price span {
+    font-size: 10px;
+  }
+  
+  /* Make notes readable on mobile! Left align paragraphs */
+  .courses-notes, .schedule-notes-box {
+    text-align: left;
+    font-size: 12px;
+    padding: 15px;
+    line-height: 1.5;
+  }
+  .courses-notes p, .schedule-notes-box p {
+    margin-bottom: 8px;
+  }
+  .courses-notes p:last-child, .schedule-notes-box p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .schedule-notes-box br {
+    display: none;
+  }
+}
+

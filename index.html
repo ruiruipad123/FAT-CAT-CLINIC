@@ -42,28 +42,96 @@
     <p>明るくポップな空間で、皆様をお待ちしております♪</p>
   </div>
 
-  <!-- 紹介 -->
-  <div class="section hp-section">
-    <img src="images/Sample.jpg">
-    <div class="text">
-      <h2>サービス①</h2>
-      <p>説明テキスト①</p>
-    </div>
+  <!-- 準備中 -->
+  <div class="coming-soon-section">
+    <h2>準備中</h2>
+    <p>お店の紹介がバッと迫力ある感じでここに入ります！</p>
   </div>
 
-  <div class="section hp-section">
-    <img src="images/Sample.jpg">
-    <div class="text">
-      <h2>サービス②</h2>
-      <p>説明テキスト②</p>
-    </div>
-  </div>
+  <!-- 予約について -->
+  <!-- 予約について -->
+  <div class="reservation-section">
+    <h2 class="main-title">予約について</h2>
+    
+    <!-- 選べるコース -->
+    <div class="courses-wrapper">
+      <div class="courses-header">
+        <h3>選べるコース</h3>
+      </div>
 
-  <div class="section hp-section">
-    <img src="images/Sample.jpg">
-    <div class="text">
-      <h2>サービス③</h2>
-      <p>説明テキスト③</p>
+
+
+      <div class="courses-grid">
+        <!-- 通常席 -->
+        <div class="course-card course-normal">
+          <h4>通常席</h4>
+          <img src="images/Sample.jpg" alt="通常席">
+          <p class="course-desc">院内の様々な<br>お席が楽しめます</p>
+          <div class="course-price">
+            <p><span>30分</span> 15万G</p>
+            <p><span>50分</span> 30万G</p>
+          </div>
+        </div>
+
+        <!-- 個室 -->
+        <div class="course-card course-private">
+          <h4>個室</h4>
+          <img src="images/Sample.jpg" alt="個室">
+          <p class="course-desc">医師が製作した個室にて<br>お話いただけます</p>
+          <div class="course-price">
+            <p><span>30分</span> 30万G</p>
+            <p><span>50分</span> 50万G</p>
+          </div>
+        </div>
+
+        <!-- お出かけ -->
+        <div class="course-card course-outing">
+          <h4>お出かけ【個室付】</h4>
+          <img src="images/Sample.jpg" alt="お出かけ">
+          <p class="course-desc">お好きな場所に<br>医師とお出かけできます</p>
+          <div class="course-price">
+            <p><span>60分</span> 120万G</p>
+            <p><span class="star-mark">★</span><span>120分</span> 200万G</p>
+          </div>
+        </div>
+
+        <!-- 貸し切り -->
+        <div class="course-card course-charter">
+          <h4>貸し切り病棟</h4>
+          <img src="images/Sample.jpg" alt="貸し切り">
+          <p class="course-desc">ハウス貸し切り<br>お連れ様無料</p>
+          <div class="course-price">
+            <p><span>60分</span> 300万G</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="courses-notes">
+        <p>※ 指名無料、コース代金のみで利用いただけます。<br><br>※ お連れ様1名＋10万G・医師を除く3名様以上は個室となります。<br><br>※★のついたコースは予約限定となっています。</p>
+      </div>
+
+    </div>
+
+    <!-- スケジュール表 -->
+    <div class="schedule-table-wrapper">
+      <table class="schedule-table">
+        <tr>
+          <th class="schedule-header">予約期間</th>
+          <th>木</th><th>金</th><th>土</th><th>日</th><th>月</th><th>火</th><th>水</th>
+        </tr>
+        <tr>
+          <th>優先指名権</th>
+          <td><span class="mark-circle">◎</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td rowspan="2" class="business-day">営<br>業<br>日</td>
+        </tr>
+        <tr>
+          <th>事前予約</th>
+          <td><span class="mark-circle mark-circle-bold">○</span></td><td><span class="mark-circle mark-circle-bold">○</span></td><td><span class="mark-circle mark-circle-bold">○</span></td><td><span class="mark-circle mark-circle-bold">○</span></td><td><span class="mark-circle mark-circle-bold">○</span></td><td><span class="mark-circle mark-circle-bold">○</span></td>
+        </tr>
+      </table>
+      <div class="schedule-notes-box">
+        <p>※ 木曜日から通常予約も並行して受け付けておりますが、<br>優先指名権をお持ちの患者さまがいらっしゃった場合は、そちらを優先して確定となります。</p>
+        <p class="highlight-note">※色付きで表示されている曜日が現在の曜日となっております。</p>
+      </div>
     </div>
   </div>
 
@@ -72,36 +140,13 @@
     <p>©SQUARE ENIX</p>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
-    }
-
-    // スライド
-    let i = 1;
-    setInterval(() => {
-      i++;
-      if (i > 3) i = 1;
-      document.getElementById("slide").src = `https://picsum.photos/800/300?${i}`;
-    }, 3000);
-
-    // スクロールアニメーション (Intersection Observer)
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.15 });
-
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll('.hp-section').forEach(section => {
-        observer.observe(section);
-      });
-    });
-  </script>
+  <script src="HP.js"></script>
 
 </body>
 
 </html>
+
+
+
+
+

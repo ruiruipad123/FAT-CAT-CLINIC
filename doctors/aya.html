@@ -1,24 +1,30 @@
 ﻿<!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>しおん - 医師紹介</title>
+    <title>あや - 医師紹介</title>
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
+
     <header>
         <div class="logo">
             <img src="../images/FCC_icon.jpg" alt="">
             <span>FAT CAT CLINIC</span>
         </div>
         <div class="menu-btn" onclick="toggleMenu()">≡</div>
+
         <div class="menu" id="menu">
             <div><a href="../index.html">トップ</a></div>
             <div><a href="../doctor.html" class="active">医師紹介</a></div>
             <div><a href="../rooms.html">個室一覧</a></div>
             <div><a href="../menu.html">処方箋＆特典</a></div>
-            <div><a href="https://docs.google.com/forms/d/e/1FAIpQLScGeY6jAjrhF7GvbKn03UDusQQ-_JL8GhUYXQqJsI2gJDrvLQ/viewform?usp=send_form">予約はこちら</a></div>
+            <div><a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScGeY6jAjrhF7GvbKn03UDusQQ-_JL8GhUYXQqJsI2gJDrvLQ/viewform?usp=send_form">予約はこちら</a>
+            </div>
             <div><a href="../access.html">アクセス</a></div>
         </div>
     </header>
@@ -29,7 +35,7 @@
     <div class="profile-header">
         <img src="../images/Sample.jpg" class="profile-hero" alt="Top Image">
         <div class="profile-icon">
-            <img src="../images/shion_senzai.jpg" alt="Icon">
+            <img src="../images/aya_senzai.jpg" alt="Icon">
         </div>
     </div>
 
@@ -46,7 +52,7 @@
         <table class="profile-table">
             <tr>
                 <th>名前</th>
-                <td>しおん</td>
+                <td>あや</td>
             </tr>
             <tr>
                 <th>担当</th>
@@ -113,16 +119,24 @@
 
         function updateGallery(src, index) {
             currentGalleryIndex = index;
+
+            // ふわっと消える
             mainImg.style.opacity = 0;
+
             setTimeout(() => {
+                // 画像切り替えしてふわっと表示
                 mainImg.src = src;
                 mainImg.style.opacity = 1;
-            }, 400);
+            }, 400); // cssのtransitionにある0.4sと合わせる
+
             thumbs.forEach(thumb => thumb.classList.remove('active'));
             thumbs[index].classList.add('active');
+
+            // ページ自体が下まで勝手にスクロールされないよう、親要素だけ横にスクロール
             const container = document.querySelector('.gallery-thumbs');
             const thumb = thumbs[index];
             const scrollTarget = thumb.offsetLeft - (container.offsetWidth / 2) + (thumb.offsetWidth / 2);
+
             container.scrollTo({
                 left: scrollTarget,
                 behavior: 'smooth'
@@ -136,6 +150,11 @@
             }, 5000);
         }
     </script>
+
 </body>
+
 </html>
+
+
+
 
