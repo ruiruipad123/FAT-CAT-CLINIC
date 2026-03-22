@@ -1,4 +1,4 @@
-/* 全体のはみ出し防止 */
+﻿/* 全体のはみ出し防止 */
 * {
   box-sizing: border-box;
 }
@@ -824,7 +824,6 @@ footer p {
 .schedule-table th:first-child {
   font-weight: bold;
   color: #ff69b4;
-  font-size: 22px;
   width: 25%;
 }
 .schedule-table th {
@@ -1026,9 +1025,13 @@ footer p {
 
 @media screen and (max-width: 768px) {
   /* Schedule Table Restorations */
-  .schedule-table { font-size: 14px; }
+  .schedule-table { font-size: 13px; }
   .schedule-table th, .schedule-table td { padding: 5px 2px; }
-  .schedule-table th:first-child { font-size: 15px; }
+  .schedule-table th:first-child { 
+    white-space: nowrap; 
+    letter-spacing: -0.5px; 
+    width: auto; 
+  }
   .mark-circle { font-size: 20px; }
   .mark-circle-bold { font-size: 28px; -webkit-text-stroke: 1px #ff1744; }
   .business-day { font-size: 13px; letter-spacing: 0; padding: 2px; }
@@ -1092,4 +1095,5 @@ footer p {
     display: none;
   }
 }
+
 
